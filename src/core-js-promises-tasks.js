@@ -134,7 +134,7 @@ function getAllResult(promises) {
 function queuPromises(promises) {
   let res = Promise.resolve('');
   promises.forEach((promise) => {
-    res = res.then((resval) => promise.then((val) => val + resval));
+    res = res.then((resval) => promise.then((val) => resval + val));
   });
   return res;
 }
